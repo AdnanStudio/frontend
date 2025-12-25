@@ -1,0 +1,193 @@
+.weekly-routine-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.routine-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.routine-header h2 {
+  font-size: 24px;
+  color: #1f2937;
+  margin: 0;
+}
+
+.academic-year {
+  background: #3b82f6;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.routine-table-wrapper {
+  overflow-x: auto;
+}
+
+.routine-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.routine-table thead {
+  background: #f9fafb;
+}
+
+.routine-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.day-column {
+  width: 150px;
+}
+
+.periods-column {
+  width: auto;
+}
+
+.routine-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.routine-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.day-cell {
+  padding: 16px;
+  vertical-align: top;
+  background: #f9fafb;
+}
+
+.day-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.periods-cell {
+  padding: 16px;
+}
+
+.periods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.period-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.period-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.teacher-highlight {
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+}
+
+.teacher-highlight:hover {
+  background: #bfdbfe;
+}
+
+.period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.period-number {
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 14px;
+}
+
+.period-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.period-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.period-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.period-info svg {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.subject-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.teacher-name {
+  color: #6b7280;
+}
+
+.room-name {
+  color: #6b7280;
+}
+
+.no-classes {
+  text-align: center;
+  padding: 24px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .routine-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .periods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .routine-table {
+    font-size: 14px;
+  }
+
+  .day-column {
+    width: 100px;
+  }
+}

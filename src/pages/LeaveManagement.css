@@ -1,0 +1,88 @@
+.leave-management-page {
+  padding: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.role-badge {
+  padding: 4px 10px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.description {
+  margin: 5px 0 0 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #666;
+}
+
+.btn-approve {
+  background: #d4edda;
+  color: #155724;
+}
+
+.btn-approve:hover {
+  background: #155724;
+  color: white;
+}
+
+.btn-reject {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-reject:hover {
+  background: #721c24;
+  color: white;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 20px 25px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.btn-danger {
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .data-table {
+    font-size: 12px;
+  }
+}
