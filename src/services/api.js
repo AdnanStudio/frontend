@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+// Render backend URL
+const API_URL = 'https://backend-yfp1.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
