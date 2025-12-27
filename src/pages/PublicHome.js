@@ -137,7 +137,7 @@ const PublicHome = () => {
       setLoading(true);
       const timestamp = new Date().getTime();
       const response = await axios.get(
-        `http://localhost:5000/api/public/home?t=${timestamp}`
+        `https://backend-yfp1.onrender.com/api/public/home?t=${timestamp}`
       );
 
       console.log("✅ Home Data Loaded:", response.data.data);

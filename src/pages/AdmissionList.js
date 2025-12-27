@@ -40,7 +40,7 @@ const AdmissionList = () => {
       setLoading(true);
       const token = localStorage.getItem('token');
       const response = await axios.get(
-        `http://localhost:5000/api/admissions?page=${pagination.page}`,
+        `https://backend-yfp1.onrender.com/api/admissions?page=${pagination.page}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
@@ -66,7 +66,7 @@ const AdmissionList = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/admissions/${id}`, {
+      await axios.delete(`https://backend-yfp1.onrender.com/api/admissions/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -82,7 +82,7 @@ const AdmissionList = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete('http://localhost:5000/api/admissions', {
+      await axios.delete('https://backend-yfp1.onrender.com/api/admissions', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -96,7 +96,7 @@ const AdmissionList = () => {
   const handleExport = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/admissions/export', {
+      const response = await axios.get('https://backend-yfp1.onrender.com/api/admissions/export', {
         headers: { Authorization: `Bearer ${token}` },
         responseType: 'blob'
       });
