@@ -105,19 +105,15 @@ const PublicHome = () => {
 
   const truncateText = (text, maxLength) => {
     if (text.length <= maxLength) return text;
-    return text.substring(0, maxLength) + '...';
+    return text.substring(0, maxLength) + "...";
   };
 
-  // Loading state - Show content loader (not image loader)
+  // Loading state - Show simple white screen with blue loader
   if (loading) {
     return (
       <div className="public-home">
         <div className="content-loading-screen">
-          <div className="loading-container">
-            <div className="loading-spinner"></div>
-            <h2>MALKHANAGAR COLLEGE</h2>
-            <p>Please Wait..</p>
-          </div>
+          <div className="simple-loader"></div>
         </div>
       </div>
     );
