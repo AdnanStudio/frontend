@@ -1,10 +1,10 @@
 export const navigationData = [
-  {
-    id: 'home',
-    label: 'Home',
-    path: '/',
-    subItems: []
-  },
+  // {
+  //   id: 'home',
+  //   label: 'Home',
+  //   path: '/',
+  //   subItems: []
+  // },
   {
     id: 'about',
     label: 'About',
@@ -32,10 +32,10 @@ export const navigationData = [
     label: 'Administration',
     path: '/administration',
     subItems: [
+      { id: 'governing', label: 'Governing Body', path: '/administration/governing' },
       { id: 'principal', label: 'Principal', path: '/administration/principal' },
       { id: 'teachers', label: 'Teachers', path: '/administration/teachers' },
-      { id: 'staff', label: 'Staff', path: '/administration/staff' },
-      { id: 'governing', label: 'Governing Body', path: '/administration/governing' }
+      { id: 'staff', label: 'Staff', path: '/administration/staff' }
     ]
   },
   {
@@ -49,12 +49,6 @@ export const navigationData = [
     ]
   },
   {
-    id: 'notice',
-    label: 'Notice',
-    path: '/notice',
-    subItems: []
-  },
-  {
     id: 'gallery',
     label: 'Gallery',
     path: '/gallery',
@@ -63,6 +57,12 @@ export const navigationData = [
       { id: 'videos', label: 'Video Gallery', path: '/gallery/videos' },
       { id: 'events', label: 'Events', path: '/gallery/events' }
     ]
+  },
+  {
+    id: 'notice',
+    label: 'Notice',
+    path: '/notice',
+    subItems: []
   },
   {
     id: 'contact',

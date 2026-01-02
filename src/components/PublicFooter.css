@@ -1,4 +1,183 @@
-.main-footer {
+
+        .main-footer {
+          background: #1a2332;
+          color: white;
+          padding: 60px 0 20px;
+          margin-top: 80px;
+        }
+
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          gap: 50px;
+          margin-bottom: 40px;
+        }
+
+        .footer-logo-section {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 20px;
+        }
+
+        .footer-logo {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+
+        .footer-col h3,
+        .footer-col h4 {
+          color: white;
+          font-size: 18px;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+
+        .footer-address p {
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.8;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+
+        .footer-links {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .footer-links li {
+          margin-bottom: 12px;
+        }
+
+        .footer-links a {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: none;
+          font-size: 14px;
+          transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+          color: white;
+        }
+
+        .helpline-image-container {
+          margin-top: 20px;
+        }
+
+        .helpline-image {
+          width: 70%;
+          max-width: 150px;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          transition: transform 0.3s ease;
+        }
+
+        
+
+        .social-icons {
+          display: flex;
+          gap: 15px;
+          margin-bottom: 30px;
+        }
+
+        .social-icons a {
+          width: 40px;
+          height: 40px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+          background: #0066cc;
+        }
+
+        .app-download {
+          margin-top: 20px;
+        }
+
+        .app-buttons img {
+          height: 45px;
+          cursor: pointer;
+          transition: opacity 0.3s;
+        }
+
+        .app-buttons img:hover {
+          opacity: 0.8;
+        }
+
+        .footer-bottom {
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          padding-top: 20px;
+          text-align: center;
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 14px;
+        }
+
+        .footer-bottom p {
+          margin-bottom: 10px;
+        }
+
+        .footer-bottom a {
+          color: white;
+          text-decoration: none;
+          font-weight: 700;
+          padding: 2px 6px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 4px;
+          transition: background 0.3s;
+        }
+
+        .footer-bottom a:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 1024px) {
+          .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+
+          .helpline-image {
+            max-width: 100%;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .main-footer {
+            padding: 40px 0 20px;
+            margin-top: 40px;
+          }
+
+          .footer-grid {
+            gap: 25px;
+          }
+
+          .footer-logo-section {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .footer-col h3,
+          .footer-col h4 {
+            font-size: 16px;
+          }
+        }
+
+/* .main-footer {
   background: #1a2332;
   color: white;
   padding: 60px 0 20px;
@@ -112,4 +291,4 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-}
+} */
