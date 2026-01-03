@@ -1,0 +1,937 @@
+/* History Timeline */
+.history-timeline {
+  position: relative;
+  padding: 40px 0;
+  margin: 40px 0;
+}
+
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #0066cc, #43e97b);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) {
+  direction: rtl;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  direction: ltr;
+}
+
+.timeline-year {
+  text-align: right;
+  padding-right: 60px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #0066cc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+  text-align: left;
+  padding-left: 60px;
+  padding-right: 0;
+  justify-content: flex-start;
+}
+
+.timeline-year::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 4px solid #0066cc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+.timeline-item:nth-child(even) .timeline-year::after {
+  left: -20px;
+  right: auto;
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-content h3 {
+  color: #2c3e50;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* History Highlights */
+.history-highlights {
+  margin: 60px 0;
+}
+
+.history-highlights h3 {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+}
+
+.highlight-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.highlight-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* History Vision */
+.history-vision {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 60px;
+}
+
+.history-vision h3 {
+  color: #2c3e50;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.history-vision p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Mission Vision Cards */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.mv-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.vision-card {
+  border-top: 5px solid #667eea;
+}
+
+.mission-card {
+  border-top: 5px solid #43e97b;
+}
+
+.mv-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.mission-card .mv-icon-wrapper {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.mv-card h2 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mv-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Core Values */
+.core-values-section {
+  margin: 60px 0;
+}
+
+.core-values-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: #0066cc;
+  box-shadow: 0 10px 25px rgba(0, 102, 204, 0.2);
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 20px;
+}
+
+.value-card h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Objectives Section */
+.objectives-section {
+  margin: 60px 0;
+}
+
+.objectives-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.objectives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.objective-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.objective-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.objective-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.objective-content h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.objective-content p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Commitment Section */
+.commitment-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 50px;
+  border-radius: 15px;
+  margin-top: 60px;
+}
+
+.commitment-section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.commitment-section p {
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Facilities Main Grid */
+.facilities-grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.facility-card-main {
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  border-top: 4px solid #0066cc;
+}
+
+.facility-card-main:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 102, 204, 0.2);
+}
+
+.facility-icon-main {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.facility-card-main h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.facility-card-main > p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.facility-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.facility-features li {
+  font-size: 14px;
+  color: #555;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.facility-features li:last-child {
+  border-bottom: none;
+}
+
+/* Additional Facilities */
+.additional-facilities {
+  margin: 60px 0;
+}
+
+.additional-facilities h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.facilities-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.facility-list-item {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s;
+}
+
+.facility-list-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.facility-icon-small {
+  font-size: 32px;
+  min-width: 50px;
+}
+
+.facility-list-item h4 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.facility-list-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Future Plans */
+.future-plans {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 50px;
+  border-radius: 15px;
+  margin-top: 60px;
+}
+
+.future-plans h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.future-plans p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Achievements Stats */
+.achievement-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.stat-achievement {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.stat-achievement:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-achievement h3 {
+  font-size: 42px;
+  color: #2c3e50;
+  margin: 20px 0 10px;
+  font-weight: 800;
+}
+
+.stat-achievement p {
+  font-size: 16px;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Achievement Timeline */
+.achievements-section {
+  margin: 60px 0;
+}
+
+.achievements-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.achievement-timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.achievement-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.achievement-item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.achievement-year {
+  font-size: 24px;
+  font-weight: 800;
+  color: #667eea;
+  position: relative;
+}
+
+.achievement-year::before {
+  content: '';
+  position: absolute;
+  left: -52px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 4px solid #667eea;
+  border-radius: 50%;
+}
+
+.achievement-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.achievement-content h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.achievement-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Achievement Cards Grid */
+.achievement-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.achievement-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.achievement-icon {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.achievement-card h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.achievement-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-card ul li {
+  font-size: 14px;
+  color: #555;
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievement-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #43e97b;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Recognition Section */
+.recognition-section {
+  margin: 60px 0;
+}
+
+.recognition-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.recognition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.recognition-item {
+  display: flex;
+  gap: 25px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+}
+
+.recognition-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.recognition-badge {
+  font-size: 48px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.recognition-text h4 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.recognition-text p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Alumni Success */
+.alumni-success,
+.future-goals {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px;
+  border-radius: 15px;
+  margin: 60px 0;
+}
+
+.alumni-success h2,
+.future-goals h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.alumni-success p,
+.future-goals p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/* Page Subtitle */
+.page-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .history-timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 80px;
+  }
+
+  .timeline-item:nth-child(even) {
+    direction: ltr;
+  }
+
+  .timeline-year {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .timeline-year::after {
+    left: -50px;
+    right: auto;
+  }
+
+  .timeline-item:nth-child(even) .timeline-year {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .timeline-item:nth-child(even) .timeline-year::after {
+    left: -50px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .objectives-list {
+    gap: 20px;
+  }
+
+  .facilities-grid-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achievement-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-year {
+    font-size: 32px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .objective-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .objective-number {
+    margin: 0 auto 20px;
+  }
+
+  .facilities-grid-main {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-section {
+    padding: 30px 20px;
+  }
+
+  .achievement-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-item {
+    grid-template-columns: 1fr;
+    padding-left: 30px;
+  }
+
+  .achievement-timeline::before {
+    left: 5px;
+  }
+
+  .achievement-year::before {
+    left: -37px;
+  }
+
+  .achievement-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recognition-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .recognition-badge {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-year {
+    font-size: 24px;
+  }
+
+  .mv-card {
+    padding: 25px 20px;
+  }
+
+  .mv-card h2 {
+    font-size: 22px;
+  }
+
+  .core-values-section h2,
+  .objectives-section h2,
+  .achievements-section h2,
+  .recognition-section h2 {
+    font-size: 24px;
+  }
+
+  .commitment-section h2 {
+    font-size: 24px;
+  }
+
+  .facility-card-main {
+    padding: 25px 20px;
+  }
+
+  .achievement-content h3 {
+    font-size: 18px;
+  }
+}
