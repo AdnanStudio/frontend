@@ -49,7 +49,7 @@ import './PublicHome.css';
 const PublicHome = () => {
   const location = useLocation();
   const [settings, setSettings] = useState({
-    schoolName: 'Malkhanagar College',
+    schoolName: 'MALKHANAGAR COLLEGE',
     schoolAddress: 'Malkhanagar, Sirajdikhan, Dhaka',
     logo: '/logo.png',
     scrollingTexts: []
@@ -68,7 +68,7 @@ const PublicHome = () => {
       );
       const websiteSettings = response.data.data?.websiteSettings || {};
       setSettings({
-        schoolName: websiteSettings.schoolName || 'Malkhanagar College',
+        schoolName: websiteSettings.schoolName || 'MALKHANAGAR COLLEGE',
         schoolAddress: websiteSettings.schoolAddress || 'Malkhanagar, Sirajdikhan, Dhaka',
         logo: websiteSettings.logo || '/logo.png',
         scrollingTexts: websiteSettings.scrollingTexts || []
