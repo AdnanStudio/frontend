@@ -35,6 +35,10 @@ import StudentAssignments from './StudentAssignments';
 import LeaveRequest from './LeaveRequest';
 import MyLeaves from './MyLeaves';
 import LeaveManagement from './LeaveManagement';
+// Add import
+import GoverningBodyManagement from './GoverningBodyManagement';
+
+
 
 import './Dashboard.css';
 
@@ -159,6 +163,14 @@ const Dashboard = () => {
           {user?.role === 'student' && (
             <Route path="/class-routine" element={<StudentRoutineView />} />
           )}
+
+         
+{user?.role === 'admin' && (
+  <>
+    {/* ... existing admin routes ... */}
+    <Route path="/governing-body" element={<GoverningBodyManagement />} />
+  </>
+)}
 
           {user?.role === 'admin' && (
             <>

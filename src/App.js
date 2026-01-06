@@ -12,6 +12,8 @@ import PrivateRoute from './components/PrivateRoute';
 import AdmissionForm from './pages/AdmissionForm';
 import AdmissionList from './pages/AdmissionList';
 
+import GoverningBody from './content/administration/GoverningBody';
+
 import './App.css';
 
 function App() {
@@ -69,6 +71,8 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route path="/administration/governing-body" element={<GoverningBody />} />
         </Routes>
       </Router>
     </Provider>

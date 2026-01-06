@@ -15,7 +15,8 @@ import {
   Settings,
   CalendarDays,
   CalendarX,
-  BookOpenCheck
+  BookOpenCheck,
+  Shield
 } from 'lucide-react';
 import './DashboardHome.css';
 
@@ -135,6 +136,13 @@ const DashboardHome = () => {
       icon: <UserCog />,
       label: 'Manage Users',
       color: '#aa96da',
+      roles: ['admin']
+    },
+    {
+      path: '/dashboard/governing-body',
+      icon: <Shield />,
+      label: 'Governing Body',
+      color: '#764ba2',
       roles: ['admin']
     },
     {
