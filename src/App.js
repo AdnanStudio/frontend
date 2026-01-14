@@ -12,10 +12,14 @@ import PrivateRoute from './components/PrivateRoute';
 import AdmissionForm from './pages/AdmissionForm';
 import AdmissionList from './pages/AdmissionList';
 
+<<<<<<< HEAD
 // ✅ NEW: Import public pages
 import TeacherTraining from './content/administration/TeacherTraining';
 import ClubManagementPublic from './content/administration/ClubManagement';
 import Teachers from './content/administration/Teachers';
+=======
+import GoverningBody from './content/administration/GoverningBody';
+>>>>>>> 7ddea26fb4fbf809d8d737f336ad423e88fc88e2
 
 import './App.css';
 
@@ -79,6 +83,8 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route path="/administration/governing-body" element={<GoverningBody />} />
         </Routes>
       </Router>
     </Provider>

@@ -16,9 +16,13 @@ import {
   CalendarDays,
   CalendarX,
   BookOpenCheck,
+<<<<<<< HEAD
   UserCheck,
   UsersRound,
   ListChecks
+=======
+  Shield
+>>>>>>> 7ddea26fb4fbf809d8d737f336ad423e88fc88e2
 } from 'lucide-react';
 import './DashboardHome.css';
 
@@ -162,6 +166,13 @@ const DashboardHome = () => {
       icon: <UserCog />,
       label: 'Manage Users',
       color: '#aa96da',
+      roles: ['admin']
+    },
+    {
+      path: '/dashboard/governing-body',
+      icon: <Shield />,
+      label: 'Governing Body',
+      color: '#764ba2',
       roles: ['admin']
     },
     {

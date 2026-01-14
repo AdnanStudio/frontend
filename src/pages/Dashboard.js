@@ -35,6 +35,10 @@ import StudentAssignments from './StudentAssignments';
 import LeaveRequest from './LeaveRequest';
 import MyLeaves from './MyLeaves';
 import LeaveManagement from './LeaveManagement';
+// Add import
+import GoverningBodyManagement from './GoverningBodyManagement';
+
+
 
 // ✅ NEW IMPORTS - Teacher Training, Club, Teacher List
 import TeacherTrainingManagement from './TeacherTrainingManagement';
@@ -218,6 +222,7 @@ const Dashboard = () => {
             <Route path="/class-routine" element={<StudentRoutineView />} />
           )}
 
+<<<<<<< HEAD
           {/* ====================================== */}
           {/* ✅ NEW: TEACHER TRAINING - Admin Only */}
           {/* ====================================== */}
@@ -242,6 +247,16 @@ const Dashboard = () => {
           {/* ====================================== */}
           {/* USER MANAGEMENT - Admin Only */}
           {/* ====================================== */}
+=======
+         
+{user?.role === 'admin' && (
+  <>
+    {/* ... existing admin routes ... */}
+    <Route path="/governing-body" element={<GoverningBodyManagement />} />
+  </>
+)}
+
+>>>>>>> 7ddea26fb4fbf809d8d737f336ad423e88fc88e2
           {user?.role === 'admin' && (
             <>
               <Route path="/users" element={<ManageUsers />} />

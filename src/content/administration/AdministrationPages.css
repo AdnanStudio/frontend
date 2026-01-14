@@ -1054,3 +1054,122 @@
     padding: 25px 20px;
   }
 }
+
+
+
+/* Governing Body Date Banner */
+.governing-date-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.governing-date-banner svg {
+  min-width: 48px;
+}
+
+.governing-date-banner h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.governing-date-banner p {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Public Members Grid */
+.members-grid-public {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.member-card-public {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.member-card-public:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.member-image-public {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.member-image-public img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.member-card-public:hover .member-image-public img {
+  transform: scale(1.05);
+}
+
+.member-info-public {
+  padding: 25px;
+}
+
+.member-info-public .member-role {
+  background: #667eea;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.member-info-public h4 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.no-members {
+  text-align: center;
+  padding: 60px;
+  color: #666;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .members-grid-public {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .members-grid-public {
+    grid-template-columns: 1fr;
+  }
+
+  .governing-date-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
