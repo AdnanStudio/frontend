@@ -222,7 +222,7 @@ const Dashboard = () => {
             <Route path="/class-routine" element={<StudentRoutineView />} />
           )}
 
-<<<<<<< HEAD
+
           {/* ====================================== */}
           {/* ✅ NEW: TEACHER TRAINING - Admin Only */}
           {/* ====================================== */}
@@ -247,7 +247,7 @@ const Dashboard = () => {
           {/* ====================================== */}
           {/* USER MANAGEMENT - Admin Only */}
           {/* ====================================== */}
-=======
+
          
 {user?.role === 'admin' && (
   <>
@@ -256,7 +256,7 @@ const Dashboard = () => {
   </>
 )}
 
->>>>>>> 7ddea26fb4fbf809d8d737f336ad423e88fc88e2
+
           {user?.role === 'admin' && (
             <>
               <Route path="/users" element={<ManageUsers />} />
